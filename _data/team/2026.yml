@@ -1,5 +1,5 @@
-# Team roster. Add one block per member.
-# subteam is optional. Leave photo out for now (we add headshots later).
+# 2026 team roster. One block per member.
+# Future committees add their own file: _data/team/2027.yml, and so on.
 
 - name: TODO Name
   role: Team Lead
