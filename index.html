@@ -4,11 +4,9 @@ title: MDX Formula Student AI
 ---
 
 <p class="lead">
-  TODO: One or two sentences introducing the society and what it does.
-</p>
-
-<p>
-  TODO: A short paragraph on the FS-AI competition and the team's goals.
+  We are Middlesex University's Formula Student AI society. We build the software
+  that lets a driverless race car see the track, plan its route, and drive itself,
+  competing in the IMechE Formula Student AI competition.
 </p>
 
 <p class="fsai-cta">
@@ -16,14 +14,73 @@ title: MDX Formula Student AI
   <a class="btn btn-outline" href="{{ '/team/' | relative_url }}">Meet the team</a>
 </p>
 
+<div class="fsai-pillars">
+  <div class="fsai-pillar">
+    <h3>Perception</h3>
+    <p>Detecting and classifying the track cones in real time from camera and LiDAR data.</p>
+  </div>
+  <div class="fsai-pillar">
+    <h3>Autonomy &amp; Navigation</h3>
+    <p>Turning what the car senses into a planned path, and that path into control commands.</p>
+  </div>
+  <div class="fsai-pillar">
+    <h3>Static &amp; Business</h3>
+    <p>The design reports, presentations, and planning that sit behind every run.</p>
+  </div>
+</div>
+
+{% if site.posts.size > 0 %}
+<h2 class="fsai-home-heading">Latest updates</h2>
+<div class="fsai-home-feed">
+  {% for post in site.posts limit:3 %}
+  <a class="fsai-home-post" href="{{ post.url | relative_url }}">
+    <span>{{ post.title }}</span>
+    <small>{{ post.date | date: '%b %d, %Y' }}</small>
+  </a>
+  {% endfor %}
+</div>
+<p><a href="{{ '/activity/' | relative_url }}">See all updates &rarr;</a></p>
+{% endif %}
+
+<div class="fsai-join">
+  <h2>Get involved</h2>
+  <p>Interested in joining the team or sponsoring us? Reach out via the <a href="{{ '/contact/' | relative_url }}">Contact page</a>.</p>
+</div>
+
 <style>
   .lead { font-size: 1.15rem; }
-  .fsai-cta { margin-top: 1.5rem; display: flex; gap: .75rem; flex-wrap: wrap; }
+  .fsai-cta { margin: 1.25rem 0 2.5rem; display: flex; gap: .75rem; flex-wrap: wrap; }
   .fsai-cta .btn {
     display: inline-block; padding: .6rem 1.1rem; border-radius: .4rem;
     background: #E4002B; color: #fff; text-decoration: none; font-weight: 600;
   }
-  .fsai-cta .btn-outline {
-    background: transparent; color: #E4002B; border: 1px solid #E4002B;
+  .fsai-cta .btn-outline { background: transparent; color: #E4002B; border: 1px solid #E4002B; }
+
+  .fsai-pillars {
+    display: grid; gap: 1.25rem; margin-bottom: 2.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
+  .fsai-pillar {
+    padding: 1.25rem; border-radius: .5rem;
+    background: rgba(127,127,127,.06); border-top: 3px solid #E4002B;
+  }
+  .fsai-pillar h3 { margin: 0 0 .5rem; }
+  .fsai-pillar p { margin: 0; opacity: .85; }
+
+  .fsai-home-heading { margin-bottom: 1rem; }
+  .fsai-home-feed { display: flex; flex-direction: column; gap: .6rem; margin-bottom: .5rem; }
+  .fsai-home-post {
+    display: flex; justify-content: space-between; align-items: baseline; gap: 1rem;
+    padding: .75rem 1rem; border-radius: .4rem; text-decoration: none; color: inherit;
+    background: rgba(127,127,127,.06); transition: background .15s ease;
+  }
+  .fsai-home-post:hover { background: rgba(228,0,43,.10); }
+  .fsai-home-post small { opacity: .65; white-space: nowrap; }
+
+  .fsai-join {
+    margin-top: 2.5rem; padding: 1.5rem; border-radius: .5rem;
+    background: rgba(228,0,43,.08); border: 1px solid rgba(228,0,43,.25);
+  }
+  .fsai-join h2 { margin-top: 0; }
+  .fsai-join p { margin-bottom: 0; }
 </style>
