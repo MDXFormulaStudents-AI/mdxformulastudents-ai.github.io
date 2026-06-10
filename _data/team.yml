@@ -1,0 +1,13 @@
+# Team roster. Add one block per member.
+# subteam is optional. Leave photo out for now (we add headshots later).
+
+- name: TODO Name
+  role: Team Lead
+  subteam: Static
+
+- name: TODO Name
+  role: Perception Developer
+  subteam: Development
+
+- name: TODO Name
+  role: Member
