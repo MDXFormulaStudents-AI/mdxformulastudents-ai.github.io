@@ -1,0 +1,26 @@
+# Team roster, grouped by year. The newest year shows first on the page.
+# To add next year: copy the "2026:" block, rename it "2027:", list that
+# committee, and leave past years untouched.
+#
+# Optional per-member fields:
+#   linkedin: full profile URL; makes the whole card click through to it
+#   photo:    headshot path, e.g. /assets/img/team/2026/ahsan.jpg
+#             (keep commented out until the image is actually uploaded)
+
+"2026":
+  - name: Ahsan Syed
+    role: Team Leader / President
+  - name: Oluwatunmise Shuaibu
+    role: Deputy Team Leader / Technical Lead
+  - name: Akashan Aravindan
+    role: Statics Lead / Head of Logistics
+  - name: Samuel Ayesigwa
+    role: Senior Developer / Engineer
+  - name: Abdiwak Debella
+    role: Senior Developer / Engineer
+  - name: Pratham Lohia
+    role: Senior Developer / Engineer
+  - name: Myu Wai Shin
+    role: Senior Developer / Engineer
+  - name: Mmeso Emmanuel-Ekwegbalu
+    role: Senior Developer / Engineer
