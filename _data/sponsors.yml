@@ -1,0 +1,14 @@
+# Sponsors. One block per sponsor.
+# Optional fields:
+#   url:  sponsor website; makes the card clickable
+#   logo: logo image path, e.g. /assets/img/sponsors/example.png
+#         (leave commented out until the image is actually uploaded)
+#
+# Until a logo is added, the sponsor shows as a name card instead.
+
+- name: TODO Sponsor Name
+  url: "https://example.com"
+  # logo: /assets/img/sponsors/example.png
+
+- name: TODO Sponsor Name
+  # logo: /assets/img/sponsors/example.png
