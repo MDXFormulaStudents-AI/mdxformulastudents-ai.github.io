@@ -4,13 +4,12 @@ icon: fas fa-users
 order: 3
 ---
 
-{% assign rosters = site.data.team | sort | reverse %}
-{% for year in rosters %}
-  {% if rosters.size > 1 %}
-  <h2 class="fsai-year">{{ year[0] }} Team</h2>
+{% for group in site.data.team %}
+  {% if site.data.team.size > 1 %}
+  <h2 class="fsai-year">{{ group.year }} Team</h2>
   {% endif %}
   <div class="fsai-grid">
-    {% for member in year[1] %}
+    {% for member in group.members %}
     {% if member.linkedin %}
     <a class="fsai-card" href="{{ member.linkedin }}" target="_blank" rel="noopener">
     {% else %}
