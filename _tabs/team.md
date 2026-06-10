@@ -5,9 +5,8 @@ order: 3
 ---
 
 {% for group in site.data.team %}
-  {% if site.data.team.size > 1 %}
-  <h2 class="fsai-year">{{ group.year }} Team</h2>
-  {% endif %}
+<details class="fsai-year-group"{% if forloop.first %} open{% endif %}>
+  <summary class="fsai-year-summary">{{ group.year }} Team</summary>
   <div class="fsai-grid">
     {% for member in group.members %}
     {% if member.linkedin %}
@@ -26,10 +25,23 @@ order: 3
     {% if member.linkedin %}</a>{% else %}</div>{% endif %}
     {% endfor %}
   </div>
+</details>
 {% endfor %}
 
 <style>
-  .fsai-year { margin: 2rem 0 1rem; padding-bottom: .3rem; border-bottom: 2px solid #E4002B; }
+  .fsai-year-group { margin-bottom: 1.5rem; }
+  .fsai-year-summary {
+    cursor: pointer; list-style: none;
+    font-size: 1.4rem; font-weight: 700;
+    padding-bottom: .3rem; margin-bottom: 1rem;
+    border-bottom: 2px solid #E4002B;
+  }
+  .fsai-year-summary::-webkit-details-marker { display: none; }
+  .fsai-year-summary::before {
+    content: "▸"; color: #E4002B; margin-right: .5rem;
+    display: inline-block; transition: transform .15s ease;
+  }
+  details[open] > .fsai-year-summary::before { transform: rotate(90deg); }
   .fsai-grid {
     display: grid; gap: 1.25rem;
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
