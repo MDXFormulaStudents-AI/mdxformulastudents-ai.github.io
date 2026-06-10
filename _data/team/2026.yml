@@ -1,0 +1,18 @@
+# 2026 team roster. One block per member.
+# Optional fields:
+#   photo:    path to a headshot, e.g. /assets/img/team/2026/jane.jpg
+#   linkedin: full profile URL; when set, the whole card links to it
+#   subteam:  e.g. Static, Perception, Navigation
+
+- name: TODO Name
+  role: Team Lead
+  subteam: Static
+  # photo: /assets/img/team/2026/example.jpg
+  # linkedin: https://www.linkedin.com/in/example/
+
+- name: TODO Name
+  role: Perception Developer
+  subteam: Development
+
+- name: TODO Name
+  role: Member
