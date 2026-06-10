@@ -4,8 +4,11 @@ icon: fas fa-users
 order: 3
 ---
 
+{% assign years = site.data.team | sort | reverse %}
+{% for entry in years %}
+<h2 class="fsai-year">{{ entry[0] }} Team</h2>
 <div class="fsai-grid">
-  {% for member in site.data.team %}
+  {% for member in entry[1] %}
   <div class="fsai-card">
     {% if member.photo %}
     <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}">
@@ -18,8 +21,13 @@ order: 3
   </div>
   {% endfor %}
 </div>
+{% endfor %}
 
 <style>
+  .fsai-year {
+    margin: 2rem 0 1rem; padding-bottom: .3rem;
+    border-bottom: 2px solid #E4002B;
+  }
   .fsai-grid {
     display: grid; gap: 1.25rem;
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
